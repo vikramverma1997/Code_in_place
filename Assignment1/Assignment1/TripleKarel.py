@@ -12,13 +12,30 @@ Triple sample worlds supplied in the starter folder.
 
 
 def main():
-    """
-    You should write your code to make Karel do its task in
-    this function. Make sure to delete the 'pass' line before
-    starting to write your own code. You should also delete this
-    comment and replace it with a better, more descriptive one.
-    """
-    pass
+# karel paints the three buildings
+    for i in range(3):
+        paint_one_box()
+
+# function used to paint one building
+def paint_one_box():
+    for i in range(2):
+        paint_one_line()
+        turn_left()
+        move()
+    paint_one_line()
+    turn_right()
+
+# function used to paint one line of building
+def paint_one_line():
+    while left_is_blocked():
+        put_beeper()
+        move()
+
+# to turn karel right
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
 
 # There is no need to edit code beyond this point

@@ -11,14 +11,48 @@ sample worlds supplied in the starter folder.
 
 
 def main():
-    """
-    You should write your code to make Karel do its task in
-    this function. Make sure to delete the 'pass' line before
-    starting to write your own code. You should also delete this
-    comment and replace it with a better, more descriptive one.
-    """
-    pass
+    while front_is_clear():
+        repair_all_arches()
+        move_to_another_arch()
+    repair_all_arches()
 
+
+def repair_all_arches():
+    repair_one_arch()
+    return_back()
+
+
+def repair_one_arch():
+    turn_left()
+    while front_is_clear():
+        check_beeper()
+    if no_beepers_present():
+        put_beeper()
+
+
+def check_beeper():
+    if beepers_present():
+        move()
+    else:
+        put_beeper()
+        move()
+
+
+def return_back():
+    turn_around()
+    while front_is_clear():
+        move()
+    turn_left()
+
+
+def turn_around():
+    turn_left()
+    turn_left()
+
+
+def move_to_another_arch():
+    for i in range(4):
+        move()
 
 # There is no need to edit code beyond this point
 

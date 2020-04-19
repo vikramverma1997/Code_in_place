@@ -14,13 +14,42 @@ assume that it is at least as tall as it is wide.
 
 
 def main():
-    """
-    You should write your code to make Karel do its task in
-    this function. Make sure to delete the 'pass' line before
-    starting to write your own code. You should also delete this
-    comment and replace it with a better, more descriptive one.
-    """
-    pass
+    make_row_black()
+    while corner_color_is(BLACK):
+        extreme_corners_white()
+    put_beeper()
+
+"""
+Karel makes the extreme two corners white
+Pre: Karel is facing west and standing on black
+Post: Karel is facing east and standing on black
+"""
+def extreme_corners_white():
+    paint_corner(BLANK)
+    move()
+    while corner_color_is(BLACK):
+        move()
+    paint_corner(BLANK)
+    turn_around()
+    move()
+
+"""
+Karel makes the whole row black except the first block
+Pre: karel is facing east
+Post: karel is facing west
+"""
+def make_row_black():
+    while front_is_clear():
+        move()
+        paint_corner(BLACK)
+    turn_around()
+
+
+def turn_around():
+    turn_left()
+    turn_left()
+
+
 
 
 # There is no need to edit code beyond this point
