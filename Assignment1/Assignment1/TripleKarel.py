@@ -16,7 +16,12 @@ def main():
     for i in range(3):
         paint_one_box()
 
-# function used to paint one building
+
+"""
+Karel paints one building
+Pre: None
+Post: Karel is facing south
+"""
 def paint_one_box():
     for i in range(2):
         paint_one_line()
@@ -25,13 +30,21 @@ def paint_one_box():
     paint_one_line()
     turn_right()
 
-# function used to paint one line of building
+"""
+Karel paints one side of a building
+Pre: None
+Post: None
+"""
 def paint_one_line():
     while left_is_blocked():
         put_beeper()
         move()
 
-# to turn karel right
+"""
+Karel turns right by moving left three times
+Pre: None
+Post: None
+"""
 def turn_right():
     turn_left()
     turn_left()

@@ -19,6 +19,7 @@ def main():
         extreme_corners_white()
     put_beeper()
 
+
 """
 Karel makes the extreme two corners white
 Pre: Karel is facing west and standing on black
@@ -33,6 +34,7 @@ def extreme_corners_white():
     turn_around()
     move()
 
+
 """
 Karel makes the whole row black except the first block
 Pre: karel is facing east
@@ -45,6 +47,11 @@ def make_row_black():
     turn_around()
 
 
+"""
+Karel rotates 180 degree
+Pre: None
+Post: None
+"""
 def turn_around():
     turn_left()
     turn_left()

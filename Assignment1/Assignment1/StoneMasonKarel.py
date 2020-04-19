@@ -17,11 +17,17 @@ def main():
     repair_all_arches()
 
 
+# Karel repairs all the arches of the building
 def repair_all_arches():
     repair_one_arch()
     return_back()
 
 
+"""
+Karel repairs one arch of all the arches
+Pre: Karel is facing east
+Post: Karel is facing north
+"""
 def repair_one_arch():
     turn_left()
     while front_is_clear():
@@ -30,6 +36,12 @@ def repair_one_arch():
         put_beeper()
 
 
+"""
+Karel check whether a beeper is present or not. 
+If not present, karel puts one beeper.
+Pre: None
+Post: None
+"""
 def check_beeper():
     if beepers_present():
         move()
@@ -38,6 +50,11 @@ def check_beeper():
         move()
 
 
+"""
+Karel returns back to its initial position
+Pre: Karel is facing North
+Post: Karel is facing east
+"""
 def return_back():
     turn_around()
     while front_is_clear():
@@ -45,11 +62,21 @@ def return_back():
     turn_left()
 
 
+"""
+Karel rotates 180 degree
+Pre: None
+Post: None
+"""
 def turn_around():
     turn_left()
     turn_left()
 
 
+"""
+Karel moves to another arch to repair
+Pre: Karel is facing east
+Post: Karel is facing east
+"""
 def move_to_another_arch():
     for i in range(4):
         move()
