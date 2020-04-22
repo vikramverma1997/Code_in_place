@@ -11,7 +11,18 @@ sample worlds supplied in the starter folder.
 
 
 def main():
-    place_all_beepers()
+    checkboard_pattern()
+
+
+def checkboard_pattern():
+    if front_is_clear():
+        place_all_beepers()
+    else:
+        turn_left()
+        if  front_is_clear():
+            place_all_beepers()
+        else:
+            put_beeper()
 
 
 def place_all_beepers():
@@ -23,32 +34,28 @@ def place_one_row():
     while front_is_clear():
         put_beeper()
         move()
-        if front_is_clear():
-            move()
-            if front_is_blocked():
-                put_beeper()
+        beeper_at_extreme_corner()
     # return_back()
     check_beeper()
 
 
-"""
-def return_back():
-   turn_around()
-   while front_is_clear():
-     move()
-   check_beeper()
-"""
+def beeper_at_extreme_corner():
+    if front_is_clear():
+        move()
+        if front_is_blocked():
+            put_beeper()
+
 
 def check_beeper():
     if beepers_present():
-        re_align()
+        align()
         if front_is_clear():
             move()
     else:
-        re_align()
+        align()
 
 
-def re_align():
+def align():
     if facing_east():
         turn_left()
         if front_is_clear():
@@ -61,17 +68,22 @@ def re_align():
             turn_right()
 
 
-"""
-def turn_around():
-    turn_left()
-    turn_left()
-"""
-
-
 def turn_right():
     turn_left()
     turn_left()
     turn_left()
+
+    """
+def return_back():
+    turn_around()
+       while front_is_clear():
+         move()
+    check_beeper()
+
+def turn_around():
+    turn_left()
+    turn_left()
+    """
 
 # There is no need to edit code beyond this point
 
