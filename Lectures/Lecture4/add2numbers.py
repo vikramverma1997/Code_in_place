@@ -1,7 +1,7 @@
 """
 File: add2numbers.py
 --------------------
-Program which asks for the user inputs of two numbers and prints their sum.
+This program asks for the user inputs of two numbers and prints their sum.
 """
 
 
