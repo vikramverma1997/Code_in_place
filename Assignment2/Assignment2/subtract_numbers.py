@@ -7,13 +7,13 @@ the first number minus the second number.
 
 
 def main():
-    """
-    You should write your code for this program in this function.
-    Make sure to delete the 'pass' line before starting to write
-    your own code. You should also delete this comment and replace
-    it with a better, more descriptive one.
-    """
-    pass
+    print("This program subtracts one number from another")
+    # asks user to input the two numbers
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    # subtract num2 from num1
+    result = num1 - num2
+    print("The result is " + str(result) + ".")
 
 
 # This provided line is required at the end of a Python file
