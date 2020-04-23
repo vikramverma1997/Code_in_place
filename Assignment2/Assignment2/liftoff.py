@@ -16,7 +16,7 @@ def main():
 
     # print countdown from 10 to 1
     for i in range(COUNTDOWN_NUM):
-        print(str(countdown_start))
+        print(countdown_start)
         countdown_start -= 1
 
     print("Liftoff!")
