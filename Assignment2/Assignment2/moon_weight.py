@@ -1,18 +1,16 @@
 """
 File: moon_weight.py
 --------------------
-Add your comments here.
+This program computes the equivalent weight on moon with respective to weight on earth.
 """
+
+WEIGHT_EARTH2MOON = 16.6
 
 
 def main():
-    """
-    You should write your code for this program in this function.
-    Make sure to delete the 'pass' line before starting to write
-    your own code. You should also delete this comment and replace
-    it with a better, more descriptive one.
-    """
-    pass
+   weight_earth = float(input("Enter a weight on Earth: "))
+   weight_moon = (WEIGHT_EARTH2MOON * weight_earth) / 100
+   print("Equivalent weight on the moon: " + str(weight_moon))
 
 
 # This provided line is required at the end of a Python file
