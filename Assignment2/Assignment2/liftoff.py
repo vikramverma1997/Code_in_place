@@ -12,12 +12,10 @@ COUNTDOWN_START = 10
 
 
 def main():
-    countdown_start = COUNTDOWN_START
 
     # print countdown from 10 to 1
     for i in range(COUNTDOWN_NUM):
-        print(countdown_start)
-        countdown_start -= 1
+        print(COUNTDOWN_START - i)
 
     print("Liftoff!")
 

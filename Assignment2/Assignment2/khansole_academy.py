@@ -46,7 +46,7 @@ def main():
             num_correct += 1
             print("Correct! You've gotten " + str(num_correct) + " correct in a row.")
         else:
-            # Reset the value of count after any incorrect answer.
+            # Reset the value of count after every incorrect answer.
             num_correct = 0
             print("Incorrect. The expected answer is " + str(actual_sum))
 
