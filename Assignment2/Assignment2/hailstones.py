@@ -4,7 +4,7 @@ File: hailstones.py
 This is a file for the optional Hailstones problem, if
 you'd like to try solving it.
 """
-
+import numpy as np
 
 def main():
 
