@@ -13,7 +13,7 @@ TOTAL_STONES = 20
 def remove_stones(total_stones, player_num):
     num_stones = int(input("Player " + str(player_num) + ", would you like to remove 1 or 2 stones?"))
     # Ask the user again for number of stones as number exceeds by 2
-    while num_stones > 2:
+    while num_stones != 1 and num_stones != 2:
         num_stones = int(input("Please enter 1 or 2: "))
     remaining_stones = total_stones - num_stones
 
