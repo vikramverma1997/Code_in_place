@@ -26,6 +26,12 @@ def input_problem():
 
 # Check whether the sum computed by user is correct or incorrect.
 def check_sum(user_sum, actual_sum):
+    """
+    >>> check_sum(2,3)
+    'Incorrect'
+    >>> check_sum(3,3)
+    'Correct'
+    """
     if user_sum == actual_sum:
         result = "Correct"
     else:

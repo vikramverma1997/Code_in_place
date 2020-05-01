@@ -7,13 +7,13 @@ the first number minus the second number.
 
 
 def main():
-    print("This program subtracts one number from another")
+    print("This program subtracts one number from another.")
     # asks user to input the two numbers
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
     # subtract num2 from num1
     result = num1 - num2
-    print("The result is " + str(result) + ".")
+    print("The result is " + str(result))
 
 
 # This provided line is required at the end of a Python file

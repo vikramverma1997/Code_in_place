@@ -8,6 +8,7 @@ you'd like to try solving it.
 STOP_NUMBER = 1
 
 
+# Check whether the number is even or odd
 def check_num(num):
     remainder = num % 2
     if remainder == 0:
@@ -26,9 +27,11 @@ def main():
 
     while num != STOP_NUMBER:
         even_or_odd = check_num(num)
+        # If the input number is even, divide it by 2
         if even_or_odd == "even":
             num1 = int(num / 2)
             print(str(num) + " is even, so I take half: " + str(num1))
+        # If the number is odd, multiply it by 3 and add 1
         else:
             num1 = int((3 * num) + 1)
             print(str(num) + " is odd, so I take 3n + 1: " + str(num1))
