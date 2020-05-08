@@ -14,7 +14,7 @@ from simpleimage import SimpleImage
 
 def make_reflected(filename):
     image = SimpleImage(filename)
-    # TODO: your code here.
+    # Code
     return image
 
 

@@ -95,10 +95,9 @@ def main():
     red_flower = red_channel('images/flower.png')
     red_flower.show()
 
-    """
     grayscale_flower_avg = grayscale('images/flower.png')
     grayscale_flower_avg.show()
-    """
+
 
 if __name__ == '__main__':
     main()

@@ -8,6 +8,7 @@ from simpleimage import SimpleImage
 
 DEFAULT_FILE = 'images/quad.jpg'
 
+
 def main():
     # Get file and load image
     filename = get_file()
@@ -17,7 +18,13 @@ def main():
     image.show()
 
     # Apply the filter
-    # TODO: your code here
+    for pixel in image:
+        R = pixel.red
+        G = pixel.green
+        B = pixel.blue
+        pixel.red = R * 1.5
+        pixel.green = G * 0.7
+        pixel.blue = B * 1.5
 
     # Show the image after the transform
     image.show()
