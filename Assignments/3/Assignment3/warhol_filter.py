@@ -19,7 +19,7 @@ def main():
             for y in range(PATCH_SIZE):
                 for x in range(PATCH_SIZE):
                     pixel = patch.get_pixel(x, y)
-                    final_image.set_pixel(x + (cols * PATCH_SIZE), y + (rows* PATCH_SIZE), pixel)
+                    final_image.set_pixel(x + (cols * PATCH_SIZE), y + (rows * PATCH_SIZE), pixel)
     final_image.show()
 
 
@@ -34,9 +34,9 @@ def make_recolored_patch(red_scale, green_scale, blue_scale):
     '''
     patch = SimpleImage(PATCH_NAME)
     for pixel in patch:
-        pixel.red = pixel.red * red_scale
-        pixel.green = pixel.green * green_scale
-        pixel.blue = pixel.blue * blue_scale
+        pixel.red *= red_scale
+        pixel.green *= green_scale
+        pixel.blue *= blue_scale
     return patch
 
 if __name__ == '__main__':
