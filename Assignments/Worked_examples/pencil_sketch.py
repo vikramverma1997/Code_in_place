@@ -10,7 +10,7 @@ from simpleimage import SimpleImage
 PADDING = 5
 
 def main():
-    original = SimpleImage('Images/vikram.png')
+    original = SimpleImage('Images/vikram.jpg')
     original.show()
     copy_img = make_copy(original)
     img_gray = grayscale(copy_img)
